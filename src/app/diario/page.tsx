@@ -7,17 +7,9 @@ import { Heart } from "lucide-react";
 export default function Diario() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Posiciones predefinidas para los post-its para que parezcan colocados a mano
-  const postIts = [
-    { id: 1, rot: -3, color: "bg-[#fef08a]", top: "10%", left: "5%" },
-    { id: 2, rot: 4, color: "bg-[#bfdbfe]", top: "15%", left: "50%" },
-    { id: 3, rot: -2, color: "bg-[#bbf7d0]", top: "50%", left: "10%" },
-    { id: 4, rot: 5, color: "bg-[#fbcfe8]", top: "60%", left: "55%" },
-  ];
-
   return (
     <PageTransition>
-      <div className="py-8 flex flex-col items-center justify-center min-h-[85vh] overflow-x-hidden">
+      <div className="py-12 flex flex-col items-center justify-center min-h-[85vh] w-full px-4 overflow-x-hidden">
         
         <AnimatePresence mode="wait">
           {!isOpen ? (
@@ -51,91 +43,91 @@ export default function Diario() {
               key="open"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="flex flex-col md:flex-row w-full max-w-4xl min-h-[600px] shadow-2xl relative"
+              className="flex flex-col md:flex-row w-full max-w-5xl shadow-2xl relative rounded-3xl"
             >
               {/* Página Izquierda */}
-              <div className="w-full md:w-1/2 bg-[#fcfaf5] border border-[#e2dac6] rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl p-8 relative"
+              <div className="w-full md:w-1/2 bg-[#fcfaf5] border border-[#e2dac6] rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl p-6 md:p-10 flex flex-col items-center relative min-h-[500px]"
                    style={{
                      backgroundImage: 'repeating-linear-gradient(transparent, transparent 31px, #e5e7eb 31px, #e5e7eb 32px)',
                      backgroundAttachment: 'local',
                      backgroundPosition: '0 -1px'
                    }}>
-                <h2 className="font-hand text-4xl text-[#5c4e43] text-center mb-8">Espacio para pensar...</h2>
+                <h2 className="font-hand text-4xl text-[#5c4e43] text-center mb-8 mt-4">Espacio para pensar...</h2>
                 
-                {/* Post-it 1 */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1, rotate: postIts[0].rot }}
-                  transition={{ delay: 0.3 }}
-                  className={`post-it ${postIts[0].color} absolute w-48 h-48 flex items-center justify-center p-4`}
-                  style={{ top: postIts[0].top, left: postIts[0].left }}
-                >
-                  <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
-                </motion.div>
+                <div className="flex-1 w-full flex flex-col items-center justify-around gap-8">
+                  {/* Post-it 1 */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1, rotate: -3 }}
+                    transition={{ delay: 0.3 }}
+                    className="post-it bg-[#fef08a] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-start md:ml-4 shadow-md"
+                  >
+                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                  </motion.div>
 
-                {/* Post-it 3 */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1, rotate: postIts[2].rot }}
-                  transition={{ delay: 0.5 }}
-                  className={`post-it ${postIts[2].color} absolute w-48 h-48 flex items-center justify-center p-4`}
-                  style={{ top: postIts[2].top, left: postIts[2].left }}
-                >
-                  <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
-                </motion.div>
+                  {/* Post-it 2 */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 4 }}
+                    transition={{ delay: 0.5 }}
+                    className="post-it bg-[#bbf7d0] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-end md:mr-8 shadow-md"
+                  >
+                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                  </motion.div>
+                </div>
               </div>
 
               {/* Lomo central (espiral simulado) */}
-              <div className="hidden md:flex flex-col justify-between w-8 bg-[#e8e2d2] border-x border-[#d1c8b4] z-10 py-8">
-                {[...Array(12)].map((_, i) => (
-                  <div key={i} className="w-full h-4 flex items-center justify-center">
-                    <div className="w-6 h-2 bg-[#4a4036] rounded-full shadow-inner opacity-80 rotate-12" />
+              <div className="hidden md:flex flex-col justify-evenly w-10 bg-[#e8e2d2] border-x border-[#d1c8b4] z-10 py-8">
+                {[...Array(14)].map((_, i) => (
+                  <div key={i} className="w-full flex items-center justify-center py-2">
+                    <div className="w-8 h-2 bg-[#4a4036] rounded-full shadow-inner opacity-80 rotate-12" />
                   </div>
                 ))}
               </div>
-              <div className="md:hidden w-full h-4 bg-[#e8e2d2] border-y border-[#d1c8b4] z-10 flex justify-between px-8">
-                {[...Array(8)].map((_, i) => (
-                  <div key={i} className="h-full w-4 flex items-center justify-center">
-                     <div className="h-6 w-2 bg-[#4a4036] rounded-full shadow-inner opacity-80 -rotate-12" />
+              <div className="md:hidden w-full h-8 bg-[#e8e2d2] border-y border-[#d1c8b4] z-10 flex justify-evenly px-4 overflow-hidden">
+                {[...Array(10)].map((_, i) => (
+                  <div key={i} className="h-full flex items-center justify-center px-2">
+                     <div className="h-8 w-2 bg-[#4a4036] rounded-full shadow-inner opacity-80 -rotate-12" />
                   </div>
                 ))}
               </div>
 
               {/* Página Derecha */}
-              <div className="w-full md:w-1/2 bg-[#fcfaf5] border border-[#e2dac6] rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl p-8 relative"
+              <div className="w-full md:w-1/2 bg-[#fcfaf5] border border-[#e2dac6] rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl p-6 md:p-10 flex flex-col items-center relative min-h-[500px]"
                    style={{
                      backgroundImage: 'repeating-linear-gradient(transparent, transparent 31px, #e5e7eb 31px, #e5e7eb 32px)',
                      backgroundAttachment: 'local',
                      backgroundPosition: '0 -1px'
                    }}>
                 
-                {/* Post-it 2 */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1, rotate: postIts[1].rot }}
-                  transition={{ delay: 0.4 }}
-                  className={`post-it ${postIts[1].color} absolute w-48 h-48 flex items-center justify-center p-4`}
-                  style={{ top: postIts[1].top, left: postIts[1].left }}
-                >
-                  <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
-                </motion.div>
+                <div className="flex-1 w-full flex flex-col items-center justify-around gap-8 mt-4 md:mt-12">
+                  {/* Post-it 3 */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1, rotate: -2 }}
+                    transition={{ delay: 0.4 }}
+                    className="post-it bg-[#bfdbfe] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-center shadow-md"
+                  >
+                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                  </motion.div>
 
-                {/* Post-it 4 */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1, rotate: postIts[3].rot }}
-                  transition={{ delay: 0.6 }}
-                  className={`post-it ${postIts[3].color} absolute w-48 h-48 flex items-center justify-center p-4`}
-                  style={{ top: postIts[3].top, left: postIts[3].left }}
-                >
-                  <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
-                </motion.div>
+                  {/* Post-it 4 */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 5 }}
+                    transition={{ delay: 0.6 }}
+                    className="post-it bg-[#fbcfe8] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-start md:ml-12 shadow-md"
+                  >
+                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                  </motion.div>
+                </div>
                 
               </div>
               
               <button 
                 onClick={() => setIsOpen(false)}
-                className="absolute -top-12 right-0 font-hand text-xl text-[#a68c74] hover:text-[#d38c8c] transition-colors"
+                className="absolute -top-10 md:-top-12 right-0 font-hand text-xl md:text-2xl text-[#a68c74] hover:text-[#d38c8c] transition-colors"
               >
                 Cerrar diario
               </button>
