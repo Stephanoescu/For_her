@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Caveat } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
 export const metadata: Metadata = {
-  title: "Nuestro Espacio",
-  description: "Un rinconcito compartido.",
+  title: "Para ti",
+  description: "Un pequeño espacio nuestro",
 };
 
 export default function RootLayout({
@@ -18,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${inter.className} bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300 min-h-screen pb-24`}>
+      <body className={`${lora.variable} ${caveat.variable} font-serif min-h-screen pb-24 overflow-x-hidden`}>
         <ThemeProvider>
-          <main className="max-w-5xl mx-auto p-6 md:p-12">
+          <main className="max-w-4xl mx-auto p-4 md:p-8">
             {children}
           </main>
           <Navigation />
