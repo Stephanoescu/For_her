@@ -61,18 +61,7 @@ export default function Home() {
                     className="w-full flex items-center justify-center gap-2 bg-[#fef08a]/80 hover:bg-[#fef08a] text-[#5c4e43] px-6 py-3 rounded-full font-serif font-medium shadow-sm transition-colors border border-[#fde047]/50"
                   >
                     <Book size={18} />
-                    Ver posibles planes
-                  </motion.button>
-                </Link>
-
-                <Link href="/sobre-mi" className="w-full sm:w-auto">
-                  <motion.button 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full flex items-center justify-center gap-2 bg-[#e0f2fe]/80 hover:bg-[#e0f2fe] text-[#5c4e43] px-6 py-3 rounded-full font-serif font-medium shadow-sm transition-colors border border-[#bae6fd]/50"
-                  >
-                    <ImageIcon size={18} />
-                    Quién soy (por si acaso)
+                    Abrir el Diario
                   </motion.button>
                 </Link>
               </div>

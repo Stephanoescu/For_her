@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 
 const routes = [
   { path: "/", icon: Mail, label: "Carta" },
-  { path: "/diario", icon: Book, label: "Planes" },
-  { path: "/sobre-mi", icon: ImageIcon, label: "Sobre Mí" },
+  { path: "/diario", icon: Book, label: "Diario" },
 ];
 
 export default function Navigation() {
