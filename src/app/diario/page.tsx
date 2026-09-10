@@ -66,13 +66,23 @@ export default function Diario() {
                 <AnimatePresence mode="wait">
                   {pageSpread === 1 ? (
                     <motion.div key="spread1-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-8">
-                      {/* Post-it 1 (Placeholder) */}
-                      <div className="post-it bg-[#fef08a] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-start md:ml-4 shadow-md -rotate-3">
-                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 1 (Pendiente...)</p>
+                      {/* Post-it 1 */}
+                      <div className="post-it bg-[#fef08a] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-start md:ml-4 shadow-md -rotate-3">
+                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                          "I want to write you a song<br/>
+                          One to make your heart remember me.."
+                        </p>
+                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— I Want to Write You a Song</p>
                       </div>
-                      {/* Post-it 2 (Placeholder) */}
-                      <div className="post-it bg-[#bbf7d0] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-end md:mr-8 shadow-md rotate-4">
-                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 2 (Pendiente...)</p>
+                      {/* Post-it 2 */}
+                      <div className="post-it bg-[#bbf7d0] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-end md:mr-8 shadow-md rotate-4">
+                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                          "I've tried playing it cool<br/>
+                          But when I'm looking at you<br/>
+                          I can't ever be brave<br/>
+                          'Cause you make my heart race"
+                        </p>
+                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— One Thing</p>
                       </div>
                     </motion.div>
                   ) : (
@@ -126,13 +136,23 @@ export default function Diario() {
                 <AnimatePresence mode="wait">
                   {pageSpread === 1 ? (
                     <motion.div key="spread1-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-8 mt-4 md:mt-12">
-                      {/* Post-it 3 (Placeholder) */}
-                      <div className="post-it bg-[#bfdbfe] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-center shadow-md -rotate-2">
-                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 3 (Pendiente...)</p>
+                      {/* Post-it 3 */}
+                      <div className="post-it bg-[#bfdbfe] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-center shadow-md -rotate-2">
+                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                          "I've been watching you all night<br/>
+                          There's something in your eyes<br/>
+                          Saying c'mon, c'mon<br/>
+                          And dance with me, baby"
+                        </p>
+                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— C'mon, C'mon</p>
                       </div>
-                      {/* Post-it 4 (Placeholder) */}
-                      <div className="post-it bg-[#fbcfe8] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-start md:ml-12 shadow-md rotate-5">
-                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 4 (Pendiente...)</p>
+                      {/* Post-it 4 */}
+                      <div className="post-it bg-[#fbcfe8] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-start md:ml-12 shadow-md rotate-5">
+                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                          "Under the lights tonight, you turned around<br/>
+                          And you stole my heart with just one look"
+                        </p>
+                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— Stole My Heart</p>
                       </div>
                     </motion.div>
                   ) : (
