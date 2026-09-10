@@ -76,10 +76,15 @@ export default function Diario() {
                       </div>
                     </motion.div>
                   ) : (
-                    <motion.div key="spread2-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center">
-                      <p className="font-hand text-3xl text-[#5c4e43]/20 italic text-center rotate-[-5deg]">
-                        (Esta página quedó en blanco... por ahora)
-                      </p>
+                    <motion.div key="spread2-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center mt-8">
+                      {/* EL POEMA DEL USUARIO EN LA PÁGINA IZQUIERDA */}
+                      <div className="post-it bg-[#fef08a] w-full max-w-[280px] min-h-[250px] flex flex-col items-center justify-center p-6 shadow-md -rotate-2 relative">
+                        <div className="washi-tape" style={{ top: '-10px', left: '50%', backgroundColor: 'rgba(239, 218, 220, 0.7)' }}></div>
+                        <p className="font-hand text-2xl text-[#5c4e43] text-center leading-[30px] pt-4">
+                          "Aunque tú no lo sepas, ya estaba buscando la forma de coincidir contigo. Esta vez no quise usar un sobre ni papel, preferí escribir líneas de código para dejar mis huellas y ver si te sacaba una sonrisa."
+                        </p>
+                        <p className="font-serif text-sm text-[#5c4e43]/80 mt-4 text-right w-full">— Stephano</p>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -131,13 +136,14 @@ export default function Diario() {
                       </div>
                     </motion.div>
                   ) : (
-                    <motion.div key="spread2-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center">
-                      {/* EL POEMA DEL USUARIO EN LA PÁGINA SIGUIENTE */}
-                      <div className="post-it bg-[#fef08a] w-full max-w-[280px] min-h-[250px] flex flex-col items-center justify-center p-6 shadow-md rotate-2">
-                        <div className="washi-tape" style={{ top: '-10px', left: '50%', backgroundColor: 'rgba(239, 218, 220, 0.7)' }}></div>
-                        <p className="font-hand text-2xl text-[#5c4e43] text-center leading-[30px] pt-4">
-                          "Aunque tú no lo sepas, ya estaba buscando la forma de coincidir contigo. Esta vez no quise usar un sobre ni papel, preferí escribir líneas de código para dejar mis huellas y ver si te sacaba una sonrisa."
-                        </p>
+                    <motion.div key="spread2-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center mt-4">
+                      {/* ESPACIO PARA FOTO EN LA PÁGINA DERECHA PARA QUE NO ESTÉ EN BLANCO */}
+                      <div className="w-56 h-64 bg-white p-3 pb-12 shadow-lg border border-[#eae5d9] flex flex-col items-center justify-center relative rotate-3">
+                        <div className="washi-tape" style={{ top: '-10px', backgroundColor: 'rgba(182, 210, 196, 0.7)' }}></div>
+                        <div className="w-full h-full bg-[#f5f2eb] border border-[#e2dac6] flex items-center justify-center overflow-hidden">
+                           <span className="text-5xl opacity-20">📸</span>
+                        </div>
+                        <p className="font-hand text-xl text-[#5c4e43] absolute bottom-3">Espacio para nuestra foto</p>
                       </div>
                     </motion.div>
                   )}
