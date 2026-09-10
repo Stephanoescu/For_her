@@ -8,7 +8,7 @@ const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
 export const metadata: Metadata = {
-  title: "Para ti",
+  title: "Valeria",
   description: "Un pequeño espacio nuestro",
 };
 
