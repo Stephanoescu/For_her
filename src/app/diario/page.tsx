@@ -137,13 +137,11 @@ export default function Diario() {
                     </motion.div>
                   ) : (
                     <motion.div key="spread2-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center mt-4">
-                      {/* ESPACIO PARA FOTO EN LA PÁGINA DERECHA PARA QUE NO ESTÉ EN BLANCO */}
-                      <div className="w-56 h-64 bg-white p-3 pb-12 shadow-lg border border-[#eae5d9] flex flex-col items-center justify-center relative rotate-3">
-                        <div className="washi-tape" style={{ top: '-10px', backgroundColor: 'rgba(182, 210, 196, 0.7)' }}></div>
-                        <div className="w-full h-full bg-[#f5f2eb] border border-[#e2dac6] flex items-center justify-center overflow-hidden">
-                           <span className="text-5xl opacity-20">📸</span>
-                        </div>
-                        <p className="font-hand text-xl text-[#5c4e43] absolute bottom-3">Espacio para nuestra foto</p>
+                      {/* NOMBRE EN GRANDE EN LA PÁGINA DERECHA */}
+                      <div className="flex items-center justify-center h-full w-full">
+                        <h2 className="font-hand text-7xl md:text-8xl text-[#d38c8c] opacity-80 -rotate-2 tracking-wide drop-shadow-sm">
+                          VALERIA
+                        </h2>
                       </div>
                     </motion.div>
                   )}
