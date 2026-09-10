@@ -2,10 +2,11 @@
 import PageTransition from "@/components/PageTransition";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Heart } from "lucide-react";
+import { Heart, ChevronRight, ChevronLeft } from "lucide-react";
 
 export default function Diario() {
   const [isOpen, setIsOpen] = useState(false);
+  const [pageSpread, setPageSpread] = useState(1); // 1 = First spread, 2 = Second spread
 
   return (
     <PageTransition>
@@ -22,9 +23,7 @@ export default function Diario() {
               className="bg-[#fcfaf5] w-full max-w-sm aspect-[3/4] rounded-r-3xl rounded-l-md shadow-2xl border border-[#e2dac6] relative flex flex-col items-center justify-center p-8 text-center cursor-pointer group"
               onClick={() => setIsOpen(true)}
             >
-              {/* Lomo de la libreta */}
               <div className="absolute left-0 top-0 bottom-0 w-8 bg-[#d38c8c] rounded-l-md border-r-2 border-black/5 opacity-80" />
-              
               <div className="washi-tape" style={{ top: '20px', left: '80%', transform: 'rotate(15deg)', backgroundColor: 'rgba(182, 210, 196, 0.7)' }}></div>
 
               <div className="z-10 flex flex-col items-center">
@@ -45,42 +44,45 @@ export default function Diario() {
               animate={{ scale: 1, opacity: 1 }}
               className="flex flex-col md:flex-row w-full max-w-5xl shadow-2xl relative rounded-3xl"
             >
-              {/* Página Izquierda */}
+              {/* === PÁGINA IZQUIERDA === */}
               <div className="w-full md:w-1/2 bg-[#fcfaf5] border border-[#e2dac6] rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl p-6 md:p-10 flex flex-col items-center relative min-h-[500px]"
                    style={{
                      backgroundImage: 'repeating-linear-gradient(transparent, transparent 31px, #e5e7eb 31px, #e5e7eb 32px)',
                      backgroundAttachment: 'local',
                      backgroundPosition: '0 -1px'
                    }}>
-                <h2 className="font-hand text-4xl text-[#5c4e43] text-center mb-8 mt-4">Espacio para pensar...</h2>
                 
-                <div className="flex-1 w-full flex flex-col items-center justify-around gap-8">
-                  {/* Post-it 1 */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1, rotate: -3 }}
-                    transition={{ delay: 0.3 }}
-                    className="post-it bg-[#fef08a] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-start md:ml-4 shadow-md"
+                {pageSpread === 2 && (
+                  <button 
+                    onClick={() => setPageSpread(1)}
+                    className="absolute top-4 left-4 flex items-center gap-1 font-hand text-xl text-[#a68c74] hover:text-[#d38c8c] transition-colors z-20"
                   >
-                    <p className="font-hand text-xl md:text-2xl text-[#5c4e43] text-center leading-tight">
-                      "Andábamos sin buscarnos, pero sabiendo que andábamos para encontrarnos."
-                    </p>
-                    <p className="font-serif text-xs text-[#5c4e43]/60 mt-2">— Julio Cortázar</p>
-                  </motion.div>
+                    <ChevronLeft size={20} /> Página anterior
+                  </button>
+                )}
 
-                  {/* Post-it 2 */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 4 }}
-                    transition={{ delay: 0.5 }}
-                    className="post-it bg-[#bbf7d0] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-end md:mr-8 shadow-md"
-                  >
-                    <p className="font-hand text-xl md:text-2xl text-[#5c4e43] text-center leading-tight">
-                      "Me sentí astronauta cuando me abriste la puerta de tu mundo."
-                    </p>
-                    <p className="font-serif text-xs text-[#5c4e43]/60 mt-2">— Elvira Sastre</p>
-                  </motion.div>
-                </div>
+                <h2 className="font-hand text-4xl text-[#5c4e43] text-center mb-8 mt-8">Espacio para pensar...</h2>
+                
+                <AnimatePresence mode="wait">
+                  {pageSpread === 1 ? (
+                    <motion.div key="spread1-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-8">
+                      {/* Post-it 1 (Placeholder) */}
+                      <div className="post-it bg-[#fef08a] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-start md:ml-4 shadow-md -rotate-3">
+                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 1 (Pendiente...)</p>
+                      </div>
+                      {/* Post-it 2 (Placeholder) */}
+                      <div className="post-it bg-[#bbf7d0] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-end md:mr-8 shadow-md rotate-4">
+                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 2 (Pendiente...)</p>
+                      </div>
+                    </motion.div>
+                  ) : (
+                    <motion.div key="spread2-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center">
+                      <p className="font-hand text-3xl text-[#5c4e43]/20 italic text-center rotate-[-5deg]">
+                        (Esta página quedó en blanco... por ahora)
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* Lomo central (espiral simulado) */}
@@ -99,7 +101,7 @@ export default function Diario() {
                 ))}
               </div>
 
-              {/* Página Derecha */}
+              {/* === PÁGINA DERECHA === */}
               <div className="w-full md:w-1/2 bg-[#fcfaf5] border border-[#e2dac6] rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl p-6 md:p-10 flex flex-col items-center relative min-h-[500px]"
                    style={{
                      backgroundImage: 'repeating-linear-gradient(transparent, transparent 31px, #e5e7eb 31px, #e5e7eb 32px)',
@@ -107,32 +109,39 @@ export default function Diario() {
                      backgroundPosition: '0 -1px'
                    }}>
                 
-                <div className="flex-1 w-full flex flex-col items-center justify-around gap-8 mt-4 md:mt-12">
-                  {/* Post-it 3 */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1, rotate: -2 }}
-                    transition={{ delay: 0.4 }}
-                    className="post-it bg-[#bfdbfe] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-center shadow-md"
+                {pageSpread === 1 && (
+                  <button 
+                    onClick={() => setPageSpread(2)}
+                    className="absolute top-4 right-4 flex items-center gap-1 font-hand text-xl text-[#a68c74] hover:text-[#d38c8c] transition-colors z-20"
                   >
-                    <p className="font-hand text-xl md:text-2xl text-[#5c4e43] text-center leading-tight">
-                      "Estar contigo o no estar contigo es la medida de mi tiempo."
-                    </p>
-                    <p className="font-serif text-xs text-[#5c4e43]/60 mt-2">— Jorge Luis Borges</p>
-                  </motion.div>
+                    Siguiente página <ChevronRight size={20} />
+                  </button>
+                )}
 
-                  {/* Post-it 4 */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 5 }}
-                    transition={{ delay: 0.6 }}
-                    className="post-it bg-[#fbcfe8] w-full max-w-[250px] min-h-[220px] flex flex-col items-center justify-center p-5 self-start md:ml-12 shadow-md"
-                  >
-                    <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
-                      "Aunque tú no lo sepas, ya estaba buscando la forma de coincidir contigo. Esta vez no quise usar un sobre ni papel, preferí escribir líneas de código para dejar mis huellas y ver si te sacaba una sonrisa."
-                    </p>
-                  </motion.div>
-                </div>
+                <AnimatePresence mode="wait">
+                  {pageSpread === 1 ? (
+                    <motion.div key="spread1-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-8 mt-4 md:mt-12">
+                      {/* Post-it 3 (Placeholder) */}
+                      <div className="post-it bg-[#bfdbfe] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-center shadow-md -rotate-2">
+                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 3 (Pendiente...)</p>
+                      </div>
+                      {/* Post-it 4 (Placeholder) */}
+                      <div className="post-it bg-[#fbcfe8] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-start md:ml-12 shadow-md rotate-5">
+                        <p className="font-hand text-xl text-[#5c4e43]/60 text-center">Poema 4 (Pendiente...)</p>
+                      </div>
+                    </motion.div>
+                  ) : (
+                    <motion.div key="spread2-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-center">
+                      {/* EL POEMA DEL USUARIO EN LA PÁGINA SIGUIENTE */}
+                      <div className="post-it bg-[#fef08a] w-full max-w-[280px] min-h-[250px] flex flex-col items-center justify-center p-6 shadow-md rotate-2">
+                        <div className="washi-tape" style={{ top: '-10px', left: '50%', backgroundColor: 'rgba(239, 218, 220, 0.7)' }}></div>
+                        <p className="font-hand text-2xl text-[#5c4e43] text-center leading-[30px] pt-4">
+                          "Aunque tú no lo sepas, ya estaba buscando la forma de coincidir contigo. Esta vez no quise usar un sobre ni papel, preferí escribir líneas de código para dejar mis huellas y ver si te sacaba una sonrisa."
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 
               </div>
               
