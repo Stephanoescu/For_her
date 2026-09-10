@@ -60,9 +60,12 @@ export default function Diario() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1, rotate: -3 }}
                     transition={{ delay: 0.3 }}
-                    className="post-it bg-[#fef08a] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-start md:ml-4 shadow-md"
+                    className="post-it bg-[#fef08a] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-start md:ml-4 shadow-md"
                   >
-                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                    <p className="font-hand text-xl md:text-2xl text-[#5c4e43] text-center leading-tight">
+                      "Andábamos sin buscarnos, pero sabiendo que andábamos para encontrarnos."
+                    </p>
+                    <p className="font-serif text-xs text-[#5c4e43]/60 mt-2">— Julio Cortázar</p>
                   </motion.div>
 
                   {/* Post-it 2 */}
@@ -70,9 +73,12 @@ export default function Diario() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1, rotate: 4 }}
                     transition={{ delay: 0.5 }}
-                    className="post-it bg-[#bbf7d0] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-end md:mr-8 shadow-md"
+                    className="post-it bg-[#bbf7d0] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-end md:mr-8 shadow-md"
                   >
-                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                    <p className="font-hand text-xl md:text-2xl text-[#5c4e43] text-center leading-tight">
+                      "Me sentí astronauta cuando me abriste la puerta de tu mundo."
+                    </p>
+                    <p className="font-serif text-xs text-[#5c4e43]/60 mt-2">— Elvira Sastre</p>
                   </motion.div>
                 </div>
               </div>
@@ -107,9 +113,12 @@ export default function Diario() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1, rotate: -2 }}
                     transition={{ delay: 0.4 }}
-                    className="post-it bg-[#bfdbfe] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-center shadow-md"
+                    className="post-it bg-[#bfdbfe] w-full max-w-[220px] aspect-square flex flex-col items-center justify-center p-4 self-center shadow-md"
                   >
-                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                    <p className="font-hand text-xl md:text-2xl text-[#5c4e43] text-center leading-tight">
+                      "Estar contigo o no estar contigo es la medida de mi tiempo."
+                    </p>
+                    <p className="font-serif text-xs text-[#5c4e43]/60 mt-2">— Jorge Luis Borges</p>
                   </motion.div>
 
                   {/* Post-it 4 */}
@@ -117,9 +126,11 @@ export default function Diario() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1, rotate: 5 }}
                     transition={{ delay: 0.6 }}
-                    className="post-it bg-[#fbcfe8] w-full max-w-[200px] aspect-square flex items-center justify-center p-4 self-start md:ml-12 shadow-md"
+                    className="post-it bg-[#fbcfe8] w-full max-w-[250px] min-h-[220px] flex flex-col items-center justify-center p-5 self-start md:ml-12 shadow-md"
                   >
-                    <p className="font-hand text-xl text-[#5c4e43]/40 text-center">...</p>
+                    <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                      "Aunque tú no lo sepas, ya estaba buscando la forma de coincidir contigo. Esta vez no quise usar un sobre ni papel, preferí escribir líneas de código para dejar mis huellas y ver si te sacaba una sonrisa."
+                    </p>
                   </motion.div>
                 </div>
                 
