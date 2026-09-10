@@ -26,8 +26,8 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-0 h-0 border-l-[144px] border-l-transparent border-r-[144px] border-r-transparent border-t-[110px] border-t-[#d3bca5] z-10" />
                 <Mail size={56} className="text-[#a68c74] mt-10" strokeWidth={1} />
               </div>
-              <p className="font-hand text-3xl text-[#8b7d72] mt-8 group-hover:text-[#d38c8c] transition-colors">
-                Para ti...
+              <p className="font-hand text-4xl text-[#8b7d72] mt-8 group-hover:text-[#d38c8c] transition-colors">
+                Valeria
               </p>
               <p className="font-serif text-[#a68c74] text-sm mt-2 italic">Toca para abrir</p>
             </motion.div>
