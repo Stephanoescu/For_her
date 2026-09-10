@@ -29,7 +29,7 @@ export default function Diario() {
               <div className="z-10 flex flex-col items-center">
                 <Heart className="text-[#d38c8c] mb-6 transition-transform group-hover:scale-110" size={40} strokeWidth={1.5} />
                 <h1 className="font-hand text-5xl text-[#5c4e43] mb-4 leading-tight">
-                  Mi Diario
+                  Mis Notas
                 </h1>
                 <p className="font-serif text-[#9b8d82] text-sm italic group-hover:text-[#d38c8c] transition-colors">
                   Toca para abrir
@@ -61,7 +61,7 @@ export default function Diario() {
                   </button>
                 )}
 
-                <h2 className="font-hand text-4xl text-[#5c4e43] text-center mb-8 mt-8">Espacio para pensar...</h2>
+
                 
                 <AnimatePresence mode="wait">
                   {pageSpread === 1 ? (
@@ -173,7 +173,7 @@ export default function Diario() {
                 onClick={() => setIsOpen(false)}
                 className="absolute -top-10 md:-top-12 right-0 font-hand text-xl md:text-2xl text-[#a68c74] hover:text-[#d38c8c] transition-colors"
               >
-                Cerrar diario
+                Cerrar libreta
               </button>
             </motion.div>
           )}

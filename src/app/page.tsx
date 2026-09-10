@@ -61,7 +61,7 @@ export default function Home() {
                     className="w-full flex items-center justify-center gap-2 bg-[#fef08a]/80 hover:bg-[#fef08a] text-[#5c4e43] px-6 py-3 rounded-full font-serif font-medium shadow-sm transition-colors border border-[#fde047]/50"
                   >
                     <Book size={18} />
-                    Abrir el Diario
+                    Abrir la Libreta
                   </motion.button>
                 </Link>
               </div>
