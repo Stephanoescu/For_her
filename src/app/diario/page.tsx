@@ -160,7 +160,7 @@ export default function Diario() {
                       {/* NOMBRE EN GRANDE EN LA PÁGINA DERECHA */}
                       <div className="flex items-center justify-center h-full w-full">
                         <h2 className="font-hand text-7xl md:text-8xl text-[#d38c8c] opacity-80 -rotate-2 tracking-wide drop-shadow-sm">
-                          VALERIA
+                          MAE
                         </h2>
                       </div>
                     </motion.div>

@@ -27,7 +27,7 @@ export default function Home() {
                 <Mail size={56} className="text-[#a68c74] mt-10" strokeWidth={1} />
               </div>
               <p className="font-hand text-4xl text-[#8b7d72] mt-8 group-hover:text-[#d38c8c] transition-colors">
-                Valeria
+                MAE
               </p>
               <p className="font-serif text-[#a68c74] text-sm mt-2 italic">Toca para abrir</p>
             </motion.div>
