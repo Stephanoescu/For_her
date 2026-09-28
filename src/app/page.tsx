@@ -46,11 +46,9 @@ export default function Home() {
               <div className="washi-tape" style={{ top: '-15px', left: '50%', backgroundColor: 'rgba(182, 210, 196, 0.7)' }}></div>
               
               <div className="font-hand text-2xl md:text-3xl text-[#3b3530] leading-[32px] pt-4 pb-8 space-y-4">
-                <p>No sé si sea correcto decir que me gustas, porque la verdad es que apenas te conozco. Pero no te voy a mentir, desde que empecé a ver tus TikToks, tus fotos y algunas cosas que compartes, me pareciste una chica muy linda y hubo algo en ti que simplemente llamó mi atención.</p>
-                <p>Y sé que realmente conozco muy poquito de ti. No sé cuál es tu canción favorita, qué cosas te hacen reír de verdad, qué te apasiona, qué cosas te molestan o cómo eres cuando tienes confianza con alguien. No conozco todavía esa parte de ti que solo se descubre con el tiempo.</p>
-                <p>Pero supongo que justamente eso es lo bonito. Que con tan poquito que he visto de ti ya me hayas generado esa curiosidad de querer conocerte más, no solamente por lo linda que me pareces, sino por saber cómo eres realmente.</p>
-                <p>No quiero hacer como si ya supiera todo de ti ni decirte cosas demasiado intensas cuando apenas estamos empezando a conocernos. Simplemente me llamaste la atención, me pareces una chica muy linda y, por lo poco que he podido conocer de ti, me dejaste con ganas de saber mucho más.</p>
-                <p>Quizás por eso me pongo un poco nervioso cuando hablo contigo o termino pensando en ti después de ver alguna foto o algún TikTok tuyo. No sé exactamente qué vaya a pasar, pero sí sé que me gustaría tener la oportunidad de conocerte un poquito más y descubrir por mí mismo todo eso que todavía no sé de ti.</p>
+                <p>No sé si sea muy pronto para decir que me gustas, porque apenas nos estamos conociendo. Pero no te voy a mentir: desde que hablamos en esa reunión y al ver las cosas que compartes, me pareciste no solo súper linda, sino que hubo algo en tu vibra que capturó toda mi atención.</p>
+                <p>Sé que aún me falta mucho por descubrir. No sé cuál es tu canción favorita, qué te hace reír a carcajadas o cómo eres cuando entras en total confianza. Pero creo que eso es lo más bonito. Con lo poquito que hemos compartido, ya me generaste unas ganas inmensas de conocerte de verdad. No solo por esa sonrisa encantadora, sino por saber cómo eres en el fondo.</p>
+                <p>No quiero sonar intenso, solo quiero ser honesto. Me llamas mucho la atención y por eso a veces me pongo un poco nervioso al hablar contigo o al ver algún TikTok tuyo. No sé qué vaya a pasar, pero me encantaría tener la oportunidad de ir descubriendo poco a poco todo eso que aún no sé de ti.</p>
               </div>
 
               <div className="mt-8 pt-8 border-t border-dashed border-[#e5e7eb] flex flex-col sm:flex-row gap-4 justify-center items-center">
