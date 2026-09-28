@@ -85,7 +85,7 @@ export default function Diario() {
                       <div className="post-it bg-[#fef08a] w-full max-w-[280px] min-h-[250px] flex flex-col items-center justify-center p-6 shadow-md -rotate-2 relative">
                         <div className="washi-tape" style={{ top: '-10px', left: '50%', backgroundColor: 'rgba(239, 218, 220, 0.7)' }}></div>
                         <p className="font-hand text-2xl text-[#5c4e43] text-center leading-[30px] pt-4">
-                          "Aunque tú no lo sepas, ya estaba buscando la forma de coincidir contigo. Esta vez no quise usar un sobre ni papel, preferí escribir líneas de código para dejar mis huellas y ver si te sacaba una sonrisa."
+                          "Aunque tú no lo sepas, desde que coincidimos en esa reu no dejo de pensar en nuestra charla. Sinceramente, no me esperaba que la chica más linda de la fiesta terminara hablando conmigo. Por eso, esta vez no quise usar un sobre ni papel, preferí escribir unas líneas de código para dejar mis huellas y ver si lograba sacarte una sonrisa."
                         </p>
                         <p className="font-serif text-sm text-[#5c4e43]/80 mt-4 text-right w-full">— Stephano</p>
                       </div>
