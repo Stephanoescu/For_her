@@ -69,20 +69,14 @@ export default function Diario() {
                       {/* Post-it 1 */}
                       <div className="post-it bg-[#fef08a] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-start md:ml-4 shadow-md -rotate-3">
                         <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
-                          "I want to write you a song<br/>
-                          One to make your heart remember me.."
+                          "Tienes una sonrisa encantadora y unos ojitos muy hermosos. Es casi imposible no notarlo."
                         </p>
-                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— I Want to Write You a Song</p>
                       </div>
                       {/* Post-it 2 */}
                       <div className="post-it bg-[#bbf7d0] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-end md:mr-8 shadow-md rotate-4">
                         <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
-                          "I've tried playing it cool<br/>
-                          But when I'm looking at you<br/>
-                          I can't ever be brave<br/>
-                          'Cause you make my heart race"
+                          "Me parece súper lindo cómo te distraes de la nada a veces cuando hablas. Es un detalle que me encanta."
                         </p>
-                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— One Thing</p>
                       </div>
                     </motion.div>
                   ) : (
@@ -139,20 +133,14 @@ export default function Diario() {
                       {/* Post-it 3 */}
                       <div className="post-it bg-[#bfdbfe] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-center shadow-md -rotate-2">
                         <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
-                          "I've been watching you all night<br/>
-                          There's something in your eyes<br/>
-                          Saying c'mon, c'mon<br/>
-                          And dance with me, baby"
+                          "Alguien que adora tanto a los niños y a sus abuelitos definitivamente tiene un corazón gigante."
                         </p>
-                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— C'mon, C'mon</p>
                       </div>
                       {/* Post-it 4 */}
                       <div className="post-it bg-[#fbcfe8] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-start md:ml-12 shadow-md rotate-5">
                         <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
-                          "Under the lights tonight, you turned around<br/>
-                          And you stole my heart with just one look"
+                          "Como futura psicóloga, seguro ya sabes leer la buena vibra que transmites. Qué suerte haber coincidido contigo."
                         </p>
-                        <p className="font-serif text-xs text-[#5c4e43]/70 mt-3">— Stole My Heart</p>
                       </div>
                     </motion.div>
                   ) : (
