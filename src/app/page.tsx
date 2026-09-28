@@ -48,7 +48,7 @@ export default function Home() {
               <div className="font-hand text-2xl md:text-3xl text-[#3b3530] leading-[32px] pt-4 pb-8 space-y-4">
                 <p>No sé si sea muy pronto para decir que me gustas, porque apenas nos estamos conociendo. Pero no te voy a mentir: desde que hablamos en esa reunión y al ver las cosas que compartes, me pareciste no solo súper linda, sino que hubo algo en tu vibra que capturó toda mi atención.</p>
                 <p>Sé que aún me falta mucho por descubrir. No sé cuál es tu canción favorita, qué te hace reír a carcajadas o cómo eres cuando entras en total confianza. Pero creo que eso es lo más bonito. Con lo poquito que hemos compartido, ya me generaste unas ganas inmensas de conocerte de verdad. No solo por esa sonrisa encantadora, sino por saber cómo eres en el fondo.</p>
-                <p>No quiero sonar intenso, solo quiero ser honesto. Me llamas mucho la atención y por eso a veces me pongo un poco nervioso al hablar contigo o al ver algún TikTok tuyo. No sé qué vaya a pasar, pero me encantaría tener la oportunidad de ir descubriendo poco a poco todo eso que aún no sé de ti.</p>
+                <p>No quiero sonar intenso, solo quiero ser honesto. Me llamas mucho la atención y por eso a veces me pongo un poco nervioso al hablar contigo. No sé qué vaya a pasar, pero me encantaría tener la oportunidad de ir descubriendo poco a poco todo eso que aún no sé de ti.</p>
               </div>
 
               <div className="mt-8 pt-8 border-t border-dashed border-[#e5e7eb] flex flex-col sm:flex-row gap-4 justify-center items-center">
