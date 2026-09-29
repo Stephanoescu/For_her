@@ -65,17 +65,23 @@ export default function Diario() {
                 
                 <AnimatePresence mode="wait">
                   {pageSpread === 1 ? (
-                    <motion.div key="spread1-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-8">
+                    <motion.div key="spread1-left" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-6 py-4">
                       {/* Post-it 1 */}
-                      <div className="post-it bg-[#fef08a] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-start md:ml-4 shadow-md -rotate-3">
-                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                      <div className="post-it bg-[#fef08a] w-full max-w-[220px] flex flex-col items-center justify-center p-4 self-start md:ml-2 shadow-md -rotate-3">
+                        <p className="font-hand text-lg text-[#5c4e43] text-center leading-tight">
                           "Tienes una sonrisa encantadora y unos ojitos muy hermosos. Es casi imposible no notarlo."
                         </p>
                       </div>
                       {/* Post-it 2 */}
-                      <div className="post-it bg-[#bbf7d0] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-end md:mr-8 shadow-md rotate-4">
-                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                      <div className="post-it bg-[#bbf7d0] w-full max-w-[220px] flex flex-col items-center justify-center p-4 self-end md:mr-4 shadow-md rotate-4">
+                        <p className="font-hand text-lg text-[#5c4e43] text-center leading-tight">
                           "Me parece súper lindo cómo te distraes de la nada a veces cuando hablas. Es un detalle que me encanta."
+                        </p>
+                      </div>
+                      {/* Post-it 3 */}
+                      <div className="post-it bg-[#fed7aa] w-full max-w-[220px] flex flex-col items-center justify-center p-4 self-center shadow-md -rotate-2">
+                        <p className="font-hand text-lg text-[#5c4e43] text-center leading-tight">
+                          "Cada cosita nueva que noto de ti me confirma lo increíble que eres. Tienes un corazón y una esencia que brillan un montón."
                         </p>
                       </div>
                     </motion.div>
@@ -129,17 +135,23 @@ export default function Diario() {
 
                 <AnimatePresence mode="wait">
                   {pageSpread === 1 ? (
-                    <motion.div key="spread1-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-8 mt-4 md:mt-12">
-                      {/* Post-it 3 */}
-                      <div className="post-it bg-[#bfdbfe] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-center shadow-md -rotate-2">
-                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                    <motion.div key="spread1-right" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex-1 w-full flex flex-col items-center justify-around gap-6 py-4 md:mt-4">
+                      {/* Post-it 4 */}
+                      <div className="post-it bg-[#bfdbfe] w-full max-w-[220px] flex flex-col items-center justify-center p-4 self-center shadow-md -rotate-2">
+                        <p className="font-hand text-lg text-[#5c4e43] text-center leading-tight">
                           "Alguien que adora tanto a los niños y a sus abuelitos definitivamente tiene un corazón gigante."
                         </p>
                       </div>
-                      {/* Post-it 4 */}
-                      <div className="post-it bg-[#fbcfe8] w-full max-w-[240px] flex flex-col items-center justify-center p-5 self-start md:ml-12 shadow-md rotate-5">
-                        <p className="font-hand text-xl text-[#5c4e43] text-center leading-tight">
+                      {/* Post-it 5 */}
+                      <div className="post-it bg-[#fbcfe8] w-full max-w-[220px] flex flex-col items-center justify-center p-4 self-start md:ml-8 shadow-md rotate-5">
+                        <p className="font-hand text-lg text-[#5c4e43] text-center leading-tight">
                           "Como futura psicóloga, seguro ya sabes leer la buena vibra que transmites. Qué suerte haber coincidido contigo."
+                        </p>
+                      </div>
+                      {/* Post-it 6 */}
+                      <div className="post-it bg-[#e9d5ff] w-full max-w-[220px] flex flex-col items-center justify-center p-4 self-end md:mr-6 shadow-md -rotate-4">
+                        <p className="font-hand text-lg text-[#5c4e43] text-center leading-tight">
+                          "No solo eres linda, también tienes una forma de escuchar que me hace sentir súper cómodo. Me encanta cuando hablamos."
                         </p>
                       </div>
                     </motion.div>
